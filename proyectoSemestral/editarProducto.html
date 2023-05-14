@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+</head>
+<body>
+    <h3>Editar producto</h3>
+    <form class="formulario-producto" method="POST" action="" onsubmit="return validarFormulario()">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+      
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea>
+      
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" min="0" step="0.01" required>
+      
+        <label for="imagen">Imagen:</label>
+        <input type="file" id="imagen" name="imagen" accept="image/*">
+      
+        <button type="submit">Guardar cambios</button>
+      </form>
+      
+      <script>
+      function validarFormulario() {
+        var nombre = $("#nombre").val();
+        var descripcion = $("#descripcion").val();
+        var precio = $("#precio").val();
+      
+        if (nombre == "") {
+          alert("Por favor, ingresa un nombre para el producto.");
+          $("#nombre").focus();
+          return false;
+        }
+      
+        if (descripcion == "") {
+          alert("Por favor, ingresa una descripción para el producto.");
+          $("#descripcion").focus();
+          return false;
+        }
+      
+        if (precio == "" || isNaN(precio)) {
+          alert("Por favor, ingresa un precio válido para el producto.");
+          $("#precio").focus();
+          return false;
+        }
+      
+        return true;
+      }
+      </script>
+      
+      
+</body>
+</html>
