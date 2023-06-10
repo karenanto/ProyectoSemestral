@@ -156,3 +156,16 @@ body {
     cursor: pointer;
     background-color: #FF69B4;
 }
+
+.selectStyle{
+    padding: 7px 5px 7px 25px;
+    width: 49.5%;
+    background-color: #fcfcfc;
+    border: 1px solid #0003;
+    outline: none;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    border-radius: 3px;
+    color: #333;
+    
+}
