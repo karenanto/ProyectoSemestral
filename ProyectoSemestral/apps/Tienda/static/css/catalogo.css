@@ -1,0 +1,35 @@
+table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    vertical-align: top;
+    border: 1px solid #ddd;
+  }
+  
+  th {
+    background-color: #F5B7B1;
+  }
+  
+  td img {
+    display: block;
+    margin: 0 auto;
+    max-width: 100px;
+  }
+  
+  tbody tr:hover {
+    background-color: #F5B7B1;
+  }
+
+  body{
+    background-color:#FDEDEC;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+
+  h3{
+    text-align: center;
+  }
+
