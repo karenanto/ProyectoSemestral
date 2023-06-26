@@ -1,0 +1,262 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #fff;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  }
+  
+  .navbar-left {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-right {
+    display: flex;
+    align-items: center;
+  }
+  
+  .navbar-brand {
+    font-size: 1.5rem;
+    margin-right: 1rem;
+  }
+  
+  .dropdown {
+    position: relative;
+  }
+  
+  .dropbtn {
+    border: none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-right: 1rem;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+  }
+  
+  .dropdown-content a {
+    color: #333;
+    display: block;
+    font-size: 1rem;
+    padding: 8px 0;
+    text-decoration: none;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  .navbar-icons {
+    margin-right: 1rem;
+  }
+  
+  #clock {
+    margin-right: 1rem;
+    color: deeppink;
+  }
+  
+  .navbar-toggle-dark-mode label i.fa-sun {
+    display: none;
+    color: #fdd835; /* color amarillo */
+  }
+  
+  .dark-mode-enabled .navbar-toggle-dark-mode label i.fa-moon {
+    display: none;
+  }
+  
+  .dark-mode-enabled .navbar-toggle-dark-mode label i.fa-sun {
+    display: inline-block;
+  }
+  
+  /* Estilos para el modo claro */
+   body {
+    background-color: #ffffff;
+    color: #ff4d8f;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+  }
+  
+  /* Estilos para el modo oscuro */
+  body.dark-mode {
+    background-color: #333;
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  
+  @media (max-width: 768px) {
+    .navbar {
+      flex-direction: column;
+    }
+  
+    .navbar-menu {
+      margin-top: 20px;
+    }
+  
+    .dropdown {
+      display: flex;
+      justify-content: center;
+    }
+  
+    .navbar-icons {
+      display: none;
+    }
+  
+    .navbar-toggle {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+  
+    #dropdown-menu {
+      display: none;
+      position: absolute;
+      z-index: 1;
+    }
+  
+    .dropdown:hover #dropdown-menu {
+      display: block;
+    }
+  
+    .dropdown-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 10px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      min-width: 200px;
+      margin-top: 10px;
+    }
+  
+    .dropdown-content a {
+      color: black;
+      padding: 10px 16px;
+      text-decoration: none;
+      display: block;
+    }
+  
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+  }
+  
+  button{
+    color: #ff69b4;
+  }
+
+  .navbar-icons a {
+    font-size: 1.2rem;
+    color: #333;
+    margin-left: 10px;
+  }
+
+  .navbar-icons a:hover {
+    color: #ff69b4;
+  }
+  .dark-mode .card {
+    background-color: #333;
+    color: #fff;
+  }
+  
+  .dark-mode .btn-primary {
+    background-color: #ff69b4;
+    border-color: #ff69b4;
+  }
+  
+  .dark-mode .btn-primary:hover {
+    background-color: #ff4d8f;
+    border-color: #ff4d8f;
+  }
+
+  /*footer*/
+  footer {
+    background-color: #F8F8F8;
+    padding: 50px 0;
+  }
+
+  .dark-mode footer{
+    background-color: black;
+  }
+  .contenedorFooter {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .boxFooter {
+    flex-basis: 30%;
+    margin-bottom: 30px;
+  }
+  .boxFooter h3 {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: #333;
+  }
+
+  .dark-mode .boxFooter h3{
+    color: #ddd;
+  }
+
+  .dark-mode .boxFooter p{
+    color: #ddd;
+  }
+  .boxFooter p {
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #555;
+  }
+  .miniBox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .miniBox img {
+    width: 30px;
+    margin-right: 10px;
+  }
+  .miniBox h3 {
+    font-size: 1rem;
+    color: #333;
+  }
+  .box {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .box i {
+    font-size: 1.5rem;
+    margin-right: 10px;
+    color: #FF69B4;
+  }
+  .box h3 {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  .carousel-item img {
+    object-fit: contain;
+    object-position: center;
+    height: 1200px;
+    max-width: 50%;
+  }
+
+  .carousel-control-next-icon {
+    background-color:#FF69B4;
+  }
+  
+  .carousel-control-prev-icon {
+    background-color:#FF69B4;
+  }
+  
