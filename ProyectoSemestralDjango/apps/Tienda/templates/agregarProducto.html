@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar producto</title>
+    <link rel="stylesheet" href="{% static 'css/form.css.' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+</head>
+<body>
+
+    <h3>Agregar Producto</h3>
+    <form id="agregar-producto-form" action="/api/productos/crear/" method="POST">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required><br>
+      
+        <label for="descripcion">Descripción:</label>
+        <textarea id="descripcion" name="descripcion" required></textarea><br>
+      
+        <label for="img_url">URL de la imagen:</label>
+        <input type="text" id="img_url" name="img_url" required><br>
+      
+        <label for="precio">Precio:</label>
+        <input type="number" id="precio" name="precio" required><br>
+      
+        <label for="stock">Stock:</label>
+        <input type="number" id="stock" name="stock" required>
+      
+        <button type="submit">Guardar</button>
+      </form>
+      
+      <script>
+      $(document).ready(function() {
+        $("#formulario-producto").submit(function(e) {
+          e.preventDefault(); // Previene que el formulario se envíe automáticamente
+      
+          var nombre = $("#nombre").val().trim();
+          var precio = $("#precio").val();
+          var stock = $("#stock").val();
+      
+          if (nombre == "") {
+            alert("Por favor ingresa un nombre válido.");
+            return false;
+          }
+      
+          if (isNaN(precio) || precio < 0) {
+            alert("Por favor ingresa un precio válido.");
+            return false;
+          }
+      
+          if (isNaN(stock) || stock < 0) {
+            alert("Por favor ingresa un stock válido.");
+            return false;
+          }
+      
+          // Si todas las validaciones pasan, envía el formulario
+          this.submit();
+        });
+      });
+      </script>
+      <script src="{% static 'js/crearProducto.js' %}"></script>
+</body>
+
+{% endblock %}
+
+</html>
+

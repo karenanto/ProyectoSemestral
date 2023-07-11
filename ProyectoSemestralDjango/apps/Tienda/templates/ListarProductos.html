@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ListadoProductos</title>
+    <link rel="stylesheet" href="{% static 'css/catalogo.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.3/jquery.validate.min.js"></script>
+
+</head>
+<body>
+  
+  <div class="container mt-4">
+    <h3>Listado de productos</h3>
+    <table id="tabla-productos">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Nombre</th>
+          <th>Precio</th>
+          <th>Descripción</th>
+          <th>Stock</th>
+          <th>Imagen</th>
+          <th>Acciones</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <script>
+    $(document).ready(function() {
+      $('.eliminar-btn').click(function() {
+        var id = $(this).closest('tr').data('id');
+        if (confirm('¿Estás seguro de que deseas eliminar este producto?')) {
+          $(this).closest('tr').remove();
+          // Aquí agregar el código para hacer cualquier otra acción necesaria
+        }
+      });
+    });
+  </script>
+  <script src="{% static 'js/solicitudes.js' %}"></script>
+
+{% endblock %}
+
+</body>
+</html>

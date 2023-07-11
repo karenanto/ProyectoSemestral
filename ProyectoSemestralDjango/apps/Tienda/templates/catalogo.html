@@ -1,0 +1,253 @@
+{% extends './base.html' %}
+
+{% load static %}
+
+{% block body %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Carrito</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'css/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+    <link rel="stylesheet" href="{% static 'css/estilo.css' %}">
+    
+</head>
+<body>
+    <div id="hero">
+        <div class="container">
+            <div class="row">
+                    <div class="six columns">
+                        <div class="contenido-hero">
+                                <h2>¿Qué es lo que estás buscando?</h2>
+                                <p>Todos los productos a $15</p>
+                                <form action="#" id="busqueda" method="post" class="formulario">
+                                    <input class="u-full-width" type="text" placeholder="Buscar flores, arreglos, ramos, esquejes y más..." id="buscador">
+                                    <input type="submit" id="submit-buscador" class="submit-buscador">
+                                </form>
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="barra">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns icono icono1">
+                        <p>Más de 300 variedades<br>
+                        Para todo tipo de ocasión</p>
+                    </div>
+                    <div class="four columns icono icono2">
+                        <p>Flores orgánicas <br>
+                        Libres de insecticidas</p>
+                    </div>
+                    <div class="four columns icono icono3">
+                        <p>De interior y exterior <br>
+                        Decora donde quieras</p>
+                    </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="lista-productos" class="container">
+        <h1 id="encabezado" class="encabezado">Cátalogo</h1>
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="{% static 'img/01.jpg' %}" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Tulipanes</h4>
+                        <p>Flores</p>
+                        <img src="{% static 'img/estrellas.png' %}">
+                        <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="1">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'img/02.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Gerberas</h4>
+                            <p>Ramo</p>
+                            <img src="{% static 'img/estrellas.png' %}">
+                            <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="2">Agregar Al Carrito</a>
+                        </div>
+                    </div>
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'img/03.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Ciclamen Rosado</h4>
+                            <p>Flores</p>
+                            <img src="{% static 'img/estrellas.png' %}">
+                            <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="3">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="{% static 'img/04.jpg' %}" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Asters</h4>
+                        <p>Arreglo</p>
+                        <img src="{% static 'img/estrellas.png' %}">
+                        <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="4">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'img/05.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Zinnias</h4>
+                            <p>Arreglo</p>
+                            <img src="{% static 'img/estrellas.png' %}">
+                            <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="5">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'img/06.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Tulipanes rosas</h4>
+                            <p>Flores</p>
+                            <img src="{% static 'img/estrellas.png' %}">
+                            <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="6">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+            <div class="four columns">
+                <div class="card">
+                    <img src="{% static 'img/07.jpg' %}" class="imagen-curso u-full-width">
+                    <div class="info-card">
+                        <h4>Tulipanes y narcisos</h4>
+                        <p>Arreglo</p>
+                        <img src="{% static 'img/estrellas.png' %}">
+                        <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                        <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="7">Agregar Al Carrito</a>
+                    </div>
+                </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'img/08.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Tulipas</h4>
+                            <p>Arreglo</p>
+                            <img src="{% static 'img/estrellas.png' %}">
+                            <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="8">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+            <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'img/09.png' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Lilium</h4>
+                            <p>Ramo</p>
+                            <img src="{% static 'img/estrellas.png' %}">
+                            <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="9">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+            </div>
+        </div> <!--.row-->
+        <div class="row">
+                <div class="four columns">
+                    <div class="card">
+                        <img src="{% static 'img/10.jpg' %}" class="imagen-curso u-full-width">
+                        <div class="info-card">
+                            <h4>Rosas rojas</h4>
+                            <p>Ramo</p>
+                            <img src="{% static 'img/estrellas.png' %}">
+                            <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                            <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="10">Agregar Al Carrito</a>
+                        </div>
+                    </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="{% static 'img/11.jpeg' %}" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <h4>Hortencias</h4>
+                                <p>Arreglo</p>
+                                <img src="{% static 'img/estrellas.png' %}">
+                                <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="11">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+                <div class="four columns">
+                        <div class="card">
+                            <img src="{% static 'img/12.png' %}" class="imagen-curso u-full-width">
+                            <div class="info-card">
+                                <h4>Lirios</h4>
+                                <p>Arreglo</p>
+                                <img src="{% static 'img/estrellas.png' %}">
+                                <p class="precio">$200  <span class="u-pull-right ">$15</span></p>
+                                <a href="#" class="u-full-width button-primary button input agregar-carrito" data-id="12">Agregar Al Carrito</a>
+                            </div>
+                        </div> <!--.card-->
+                </div>
+            </div> <!--.row-->
+    </div>
+
+    <footer id="footer" class="footer">
+        <div class="container">
+            <div class="row">
+                    <div class="four columns">
+                            <nav id="principal" class="menu">
+                                <a class="enlace" href="#">Para tu Negocio</a>
+                                <a class="enlace" href="#">Conviertete en Instructor</a>
+                                <a class="enlace" href="#">Aplicaciones Móviles</a>
+                                <a class="enlace" href="#">Soporte</a>
+                                <a class="enlace" href="#">Temas</a>
+                            </nav>
+                    </div>
+                    <div class="four columns">
+                            <nav id="secundaria" class="menu">
+                                <a class="enlace" href="#">¿Quienes Somos?</a>
+                                <a class="enlace" href="#">Empleo</a>
+                                <a class="enlace" href="#">Blog</a>
+                            </nav>
+                    </div>
+            </div>
+        </div>
+    
+    </footer>
+    
+
+    {% block script %}
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script>
+    <script src="{% static 'js/carrito.js' %}"></script>
+    <script src="{% static 'js/funciones.js' %}"></script>
+
+    {% endblock %}
+
+</body>
+</html>
+
+{% endblock %}

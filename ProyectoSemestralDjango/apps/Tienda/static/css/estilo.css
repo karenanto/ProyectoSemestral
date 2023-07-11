@@ -1,0 +1,88 @@
+/* Estilos para la barra de navegación */
+.navbar {
+  background-color: transparent; /* Cambiar el color de fondo */
+  padding: 10px 20px; /* Ajustar el espacio interno */
+}
+
+.navbar-brand {
+  font-weight: bold; /* Cambiar el peso de la fuente del texto del enlace */
+  color: #000; /* Cambiar el color del texto del enlace */
+}
+
+.navbar-brand:hover {
+  color: #ff0000; /* Cambiar el color del texto del enlace al pasar el cursor */
+}
+
+.navbar-nav {
+  margin-top: 10px; /* Ajustar el margen superior de los elementos de navegación */
+}
+
+.nav-link {
+  color: #000; /* Cambiar el color del texto del enlace */
+  margin-right: 10px; /* Ajustar el margen derecho entre los elementos de navegación */
+}
+
+.nav-link.active {
+  font-weight: bold; /* Cambiar el peso de la fuente del enlace activo */
+}
+
+.navbar-right {
+  display: flex; /* Mostrar los elementos en línea en el lado derecho */
+  align-items: center; /* Centrar verticalmente los elementos */
+}
+
+#img-carrito {
+  width: 30px; /* Ajustar el ancho de la imagen del carrito */
+  margin-right: 10px; /* Ajustar el margen derecho de la imagen del carrito */
+}
+
+#carrito {
+  position: absolute; /* Posicionar el carrito de compras */
+  top: 50px; /* Ajustar la posición superior del carrito */
+  right: 20px; /* Ajustar la posición derecha del carrito */
+  background-color: #fff; /* Cambiar el color de fondo del carrito */
+  padding: 10px; /* Ajustar el espacio interno del carrito */
+  border: 1px solid #ccc; /* Añadir un borde al carrito */
+  display: none; /* Ocultar el carrito inicialmente */
+}
+
+.submenu:hover #carrito {
+  display: block; /* Mostrar el carrito al pasar el cursor sobre el elemento del menú */
+}
+
+#lista-carrito {
+  width: 100%; /* Ajustar el ancho de la tabla del carrito */
+}
+
+#totalCompra {
+  margin-top: 10px; /* Ajustar el margen superior del total de la compra */
+}
+
+.button {
+  display: inline-block; /* Mostrar los botones en línea */
+  margin-right: 10px; /* Ajustar el margen derecho entre los botones */
+  padding: 5px 10px; /* Ajustar el espacio interno de los botones */
+  background-color: #007bff; /* Cambiar el color de fondo de los botones */
+  color: #fff; /* Cambiar el color del texto de los botones */
+  text-decoration: none; /* Quitar la decoración de texto subrayado */
+}
+
+.button:hover {
+  background-color: #0056b3; /* Cambiar el color de fondo de los botones al pasar el cursor */
+}
+
+.dark-mode-toggle {
+  display: none; /* Ocultar el interruptor de modo oscuro inicialmente */
+}
+
+.fa-moon,
+.fa-sun {
+  margin-right: 5px; /* Ajustar el margen derecho entre los íconos */
+}
+
+/* Estilos adicionales para el reloj */
+#clock {
+  font-weight: bold; /* Cambiar el peso de la fuente del reloj */
+  font-size: 14px; /* Cambiar el tamaño de la fuente del reloj */
+  margin-left: 10px; /* Ajustar el margen izquierdo del reloj */
+}
