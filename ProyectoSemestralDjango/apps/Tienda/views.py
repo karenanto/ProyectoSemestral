@@ -37,6 +37,9 @@ def cargarResultadosBusqueda(request):
 def cargarDetalleProducto(request):
     return render(request="detalleProducto.html")
 
+def cargarAgregarProducto(request):
+    return render(request="agregarProducto.html")
+
 def procesar_compra(request, id_producto):
     producto = get_object_or_404(Producto, id=id_producto)
 

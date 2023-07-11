@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio admin</title>
+</head>
+<body>
+    <h1>Panel de administrador</h1>
+    <form id="search-form">
+        <input type="text" id="search-input" placeholder="Buscar productos...">
+        <button type="submit">BuscarProducto</button>
+    </form>
+    <ul>
+        <li><a href="listarProductos/">Listado de productos</a></li>
+        <li><a href="agregarProducto/">Agregar producto</a></li>
+        <li><a href="">Listado de usuarios</a></li>
+        <li><a href="">Agregar usuario</a></li>
+        <li><a href="">Buscar usuario</a></li>
+    </ul>
+    <script src="{% static 'js/busqueda.js' %}"></script>
+</body>
+</html>

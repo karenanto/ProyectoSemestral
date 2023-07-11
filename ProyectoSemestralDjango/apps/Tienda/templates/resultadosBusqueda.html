@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    {% extends './base.html' %}
+
+    {% load static %}
+
+    {% block body %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados Búsqueda</title>
+</head>
+<body>
+    <h1>Resultados de búsqueda</h1>
+    <div id="search-results"></div>
+    
+    <script src="{% static 'js/busqueda.js' %}"></script>
+
+</body>
+{% endblock %}
+</html>

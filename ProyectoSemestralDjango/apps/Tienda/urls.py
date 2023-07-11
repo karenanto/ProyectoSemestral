@@ -16,6 +16,14 @@ urlpatterns = [
     path('listarProductos/', views.cargarListarProductos),
     path('resultadosBusqueda/', views.cargarResultadosBusqueda),
     path('detalleProducto/', views.cargarDetalleProducto),
+
+    path('detalleProducto/', views.cargarDetalleProducto),
+    path('detalleProducto/', views.cargarDetalleProducto),
+    path('detalleProducto/', views.cargarDetalleProducto),
+    path('detalleProducto/', views.cargarDetalleProducto),
+
+
+    path('agregarProducto/', views.cargarAgregarProducto),
     path('api/', include('api.urls'))
 
 ]
