@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Producto(models.Model):
@@ -33,3 +34,20 @@ class Compra(models.Model):
     id_producto= models.ForeignKey(Producto,on_delete=models.CASCADE)
     cantidad =  models.IntegerField(null=False)
     total =  models.IntegerField(null=False)
+
+class Carrito(models.Model):
+    usuario = models.OneToOneField(User, on_delete=models.CASCADE)
+    productos = models.ManyToManyField('Producto')
+    total = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    cantidad = models.PositiveIntegerField(default=0)
+
+    def actualizar_total(self):
+        self.total = sum(producto.precio for producto in self.productos.all())
+        self.save()
+
+    def actualizar_cantidad(self):
+        self.cantidad = self.productos.count()
+        self.save()
+
+    def __str__(self):
+        return f"Carrito de {self.usuario.username}"

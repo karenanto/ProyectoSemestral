@@ -1,6 +1,6 @@
-from django.shortcuts import get_object_or_404
+from django.shortcuts import get_object_or_404, redirect
 #from rest_framework import generics
-from apps.Tienda.models import Producto
+from apps.Tienda.models import Producto, Carrito
 from .serializers import ProductSerializer
 from django.http import JsonResponse
 # Create your views here.
